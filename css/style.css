@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --color-principal:rgb(245, 159, 196);
+    --color-secundario:rgb(252, 62, 94);
+    --color-blanco:white;
+    --color-gris:rgb(168, 167, 167);
+    --color-negro:black;
+}
+body{
+    font-family: 'ubuntu';
+    
+}
+.header-home{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    background-color: var(--color-principal);
+    padding: 1em;
+    position: absolute;
+    
+}
+
+
+.marca img{
+width: 5em;
+height: 5em;
+}
+.iconor-nav {
+  color: var(--color-blanco);
+  font-size: 1.5em;
+  padding-right: .5em;
+
+}
+
+.container-icons-header img{
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+}
+.buscador input {
+    width: 30em;
+    border-radius: 1em;
+    height: 3em;
+    border: none;
+    padding: .5em;
+}
+input::placeholder { font-size:1.5em; 
+ }
+
+/*navbar*/
+
+.navbar a{
+
+    color: var(--color-blanco);
+    font-weight: 100;
+    font-size: 1.3em;
+}
+.navbar ul {
+    display:flex;
+    justify-content: center;
+    gap: 3em;
+}
+.dropdown-productos li{
+display: none;
+}
+
+
+
+/*main*/
+.slider_home{
+    height: 40em;
+    width: 100%;
+}
+.imagenes_slider {
+    width: 100%;
+    height: 100%;
+}
+
+.banner_informativo{
+    height:5em ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:100;
+    font-size: 2em;
+    font-family: 'ubuntu';
+    background-color: #efeeee;
+    margin-top: 1em;
+}
+.productos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    padding: 2em;
+}
+.producto {
+    width: 100%;
+    height: 40em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+   margin-bottom: 1em;
+   background-color: rgb(247, 240, 247);
+
+}
+.titulo-art{
+     font-size: 1.2em;
+    font-weight: 100;
+    padding-left: 1em;
+}
+.producto img{
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+.producto span ,p{
+padding-left: 1em;
+}
+.btn{
+text-decoration: none;
+color: var(--color-blanco);
+width: 4em;
+height: 1em;
+padding: .5em 2em;
+border-radius: .5em;
+
+
+}
+.comprar{
+background-color: var(--color-secundario);
+}
+.agregar-carrito{
+background-color: forestgreen;
+}
+/*calificaciones*/
+
+  /*comentarios hecho por ia*/
+  /* Customer Feedback Section */
+.customer-feedback-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 100%;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .customer-feedback-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .customer-feedback-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Espaciado entre filas y columnas */
+  }
+  .customer-feedback-item {
+    display: flex;
+    gap: 1rem;
+
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  .customer-feedback-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+  
+  /*.customer-feedback-content {
+flex: 1;
+  }*/
+  
+  .customer-feedback-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .customer-feedback-rating {
+    margin: 0.5rem 0;
+  }
+  
+  .customer-feedback-rating .star {
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+  
+  .customer-feedback-rating .star.filled {
+    color: gold;
+  }
+  
+  .customer-feedback-comment {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  
+
+/*footer*/
+footer{
+    background-color: var(--color-gris);
+    height: 15em;
+}
+.container-colum-footer{
+padding-top: 2em;
+    display: flex;
+    justify-content:space-around;
+}
+.container-colum-footer a{
+    color: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;}
+
+.copyright{
+    text-align: center;
+    margin-top: 4em;
+}
+.titulo-columna-footer h2{
+  padding-bottom: 0.5em;
+
+}
+.titulo-columna-footer ul{
+display: flex;
+flex-direction: column;
+gap: 1em;
+
+}
+
+/*CONTACTO*/
+.main-contac{
+  height: 100vh;
+  width: 100%;
+  padding: 1em;
+}
+.contenedor-contacto{
+display: flex;
+flex-direction: column;
+}
