@@ -23,7 +23,7 @@
             <input type="search" name="buscador" id="serach" placeholder="Buscar prenda...">
         </div> -->
         <nav class="navbar">
-            <ul>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="">Pantalones</a></li>
                 <li><a href="">Remeras</a></li>
                 <li><a href="">Faldas</a></li>
@@ -31,28 +31,40 @@
                 <li><a href="">Contacto</a></li>
                 <li><a href="">Giftcard</a></li>
             </ul>
+            <!--Mmenu hamburguesa-->
+
+    
     
         </nav>
         <div class="container-icons-header">
             <i class="iconor-nav bi-search"></i>
             <i class="iconor-nav bi-person"></i>
-            <i class="iconor-nav bi-bag-heart"></i>
+            <i class="iconor-nav bi-bag-heart"></i><span class="numerito">0</span>
            
 
         </div>
+        <div class="menu-hamburguesa" id="menu-hamburguesa">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+           
+        </div>
+
+        
     </header>
 
    
-<main class="slider_home">
- <button class="prev-btn"></button>
+<main class="main-home">
+    <div class="slider">
+
  <div class="slider-container">
     <img src="./img/iconos/banner-1.webp" alt="">
     <img src="./img/iconos/banner2.webp" alt="">
     <img src="./img/iconos/banner3.webp" alt="">
  </div>
- <button class="prev-btn"></button>
 
- <section class="banner_informativo">
+</div>
+<section class="banner_informativo">
             
     <span>12 cuotas sin interes en todas tus compras</span>
 
@@ -70,7 +82,7 @@
 <section class="customer-feedback-section">
 <h2 class="customer-feedback-title">Opiniones de Nuestras Clientas</h2>
 <div class="customer-feedback-list">
-  <!-- Opinión 1 -->
+
   <div class="customer-feedback-item">
     <img src="./img/usuarios/usuario1.avif" alt="Foto de Ana Gómez" class="customer-feedback-photo">
     <div class="customer-feedback-content">
@@ -86,7 +98,7 @@
     </div>
   </div>
 </div>
-</section>
+</section> 
 </main>
     <footer>
         <div class="container-colum-footer">
@@ -120,7 +132,7 @@
             <p> Copyright MisCoralia| Ropa de mujer-2024.Todos los derechos reservados</p>
         </div>
     </footer>
-<script src="app.js"></script>
+<script src="./app.js"></script>
 </body>
 
 </html>
