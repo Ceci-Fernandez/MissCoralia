@@ -1,3 +1,11 @@
+const productos=[
+    {
+        id:1,
+        nombre:""
+    }
+]
+
+
 let sliderContainer= document.querySelector(".slider-container");
  let imagenes= sliderContainer.querySelectorAll("img");
 let index= 0;
@@ -22,3 +30,4 @@ hamburguesa.addEventListener('click',()=>{
         enlaces.style.display='none';
     }
 })
+
