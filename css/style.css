@@ -180,7 +180,6 @@ cursor: pointer;
 .nav-links.show { /* Mostrar cuando el usuario haga clic */
     display: flex;
 }
-
 }
 
 /*main*/
