@@ -1,13 +1,15 @@
 const shopProductos=document.getElementById("productos");
 const productos = [
-    { id:1, img:"./img/accesorio/pexels-ashuphotography-1413420.jpg" ,nombre: "aretes cascada turquesa", precio: 9000, tarjeta: "6 cuotas sin interés de $3.000" },
-    { id:2, img:"./img/pantalon_vestir.jpg" ,nombre: "pantalon ejecutivo milano", precio: 45000, tarjeta: "6 cuotas sin interés de $7.500" },
+    { id:1, img:"./img/accesorio/pexels-ashuphotography-1413420.jpg" ,nombre: "Aretes cascada turquesa", precio: 9000, tarjeta: "6 cuotas sin interés de $3.000" },
+    { id:2, img:"./img/pantalones/pantalon_vestir.jpg" ,nombre: "pantalon ejecutivo milano", precio: 45000, tarjeta: "6 cuotas sin interés de $7.500" },
     { id:3, img:"./img/remeras/remera rosa.jpg" ,nombre: "Remeron oversided-Rosa", precio: 20000, tarjeta: "6 cuotas sin interés de $3.333,34" },
     { id:4, img:"img/pantalones/pexels-774990922-29503794.jpg" ,nombre: "Pantalón Wide Leg Urban", precio: 30000, tarjeta: "6 cuotas sin interés de $5.000" },
-    { id:5, img:"./img/remeras/remera blanca.jpg" ,nombre: "Bolso YSL Elegance", precio: 54000, tarjeta: "6 cuotas sin interés de $9.000" },
+    { id:5, img:"./img/remeras/remera blanca.jpg" ,nombre: "Remera Blanca", precio: 54000, tarjeta: "6 cuotas sin interés de $9.000" },
     { id:6, img:"./img/remeras/remeron_floreado.jpg" ,nombre: "Vestido floreado", precio: 36000, tarjeta: "6 cuotas sin interés de $6.000" },
-    { id:7, img:"./img/pantalones/pexels-godisable-jacob-226636-970374.jpg" ,nombre: "Conjunto Riviera Chic", precio: 40000, tarjeta: "6 cuotas sin interés de $6.666,67" }
-  ];
+    { id:7, img:"./img/pantalones/pexels-godisable-jacob-226636-970374 (1).jpg" ,nombre: "Conjunto Riviera Chic", precio: 40000, tarjeta: "6 cuotas sin interés de $6.666,67" },
+    { id:8, img:"./img/accesorio/pexels-badis-benkhelil-1135505371-27835298.jpg" ,nombre: "Cartera de mano", precio: 50000, tarjeta: "6 cuotas sin interés de $8.833,33" },
+    { id:9, img:"./img/pantalones/pexels-marcus-silva-86421404-16624071.jpg" ,nombre: "Pantalon de lino rosa", precio: 60000, tarjeta: "6 cuotas sin interés de $10.000,00" } 
+];
   
   let carrito = [];
 
@@ -71,16 +73,19 @@ const productos = [
             </div>*/
 productos.forEach((productos)=>{
     let content=document.createElement("div");
+    content.className= "card";
+
     content.innerHTML= `
     <img class="img_prod" src= "${productos.img}">
     <p class="titulo-art"> ${productos.nombre}</p>
-    <span>${productos.precio}$</span>
-    <p class="descropcion-cuotas"> ${productos.tarjeta}</p>
+    <span>$${productos.precio}</span>
+    <p class="descripcion-cuotas"> ${productos.tarjeta}</p>
     `;   
 
  shopProductos.append(content);
  let abrirProducto=document.createElement("button")
  abrirProducto.innerText="Ver más."
+ abrirProducto.className="ver_en_detalle"
 
  content.append(abrirProducto)
 })
