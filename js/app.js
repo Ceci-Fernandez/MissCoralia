@@ -10,67 +10,16 @@ const productos = [
     { id:8, img:"./img/accesorio/pexels-badis-benkhelil-1135505371-27835298.jpg" ,nombre: "Cartera de mano", precio: 50000, tarjeta: "6 cuotas sin interés de $8.833,33" },
     { id:9, img:"./img/pantalones/pexels-marcus-silva-86421404-16624071.jpg" ,nombre: "Pantalon de lino rosa", precio: 60000, tarjeta: "6 cuotas sin interés de $10.000,00" } 
 ];
+const comentarios = [
+    { img: "./img/usuarios/usuario1.avif ", nombre:"Ana Gómez",calficacion:"",oponion:"¡Me encantó todo! La ropa es aún más bonita que en las fotos, la calidad es increíble, y el equipo siempre está dispuesto a ayudarte. Sin duda vuelvo a comprar! "},
+    { img: "./img/usuarios/usuario2.avif ", nombre:"Mariana López",calficacion:"",oponion:"El envío fue súper rápido y la atención al cliente es impecable. ¡Recomiendo 100%! "},
+    { img: "./img/usuarios/usuario3.avif ", nombre:"Valeria Ruiz",calficacion:"",oponion:"La calidad de la ropa es excelente y llegó justo a tiempo. ¡Muy satisfecha con la atención! "},
+    
+]
   
-  let carrito = [];
+  let carrito = []; 
 
-/*
-        <section class="productos">
-            <div class="producto">
-                <img src="./img/accesorio/pexels-ashuphotography-1413420.jpg" alt="">
-                <p class="titulo-art"> Aretes Cascada Turquesa</p>
-                <span>$9.000</span>
-                <p class="descripcion-cuotas">3 cuotas sin inrés de $3.000</p>
 
-          </div>
-            <div class="producto">
-                <img src="./img/pantalon_vestir.jpg" alt="">
-                <p class="titulo-art"> Pantalón Ejecutivo Milano</p>
-                <span>$45.000</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $7.500</p>
-
-            </div>
-
-            <div class="producto">
-                <img src="./img/remeras/remera rosa.jpg" alt="">
-                <p class="titulo-art"> Remeron oversided-Rosa</p>
-                <span>$20.000</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $3.333,34</p>
-
-            </div>
-            <div class="producto">
-                <img src="img/pantalones/pexels-774990922-29503794.jpg" alt="">
-                <p class="titulo-art"> Pantalón Wide Leg Urban</p>
-                <span>$30.000</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $5.000</p>
-
-            </div>
-            <div class="producto">
-                <img src="./img/remeras/remera blanca.jpg" alt="">
-                <p class="titulo-art"> Camiseta Essential Blanca</p>
-                <span class= "precio_prod">$25.000</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $4.166,67</p>
-            </div>
-
-            <div class="producto">
-                <img src="./img/remeras/remeron_floreado.jpg" alt="">
-                <p class="titulo-art">Bolso YSL Elegance</p>
-                <span>$54.000</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $9.000</p>
-            </div>
-            <div class="producto">
-                <img src="./img/pantalones/pexels-godisable-jacob-226636-970374.jpg" alt="">
-                <p class="titulo-art"> Vestido floreado</p>
-                <span>$36.600</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $6.000</p>
-
-            </div>
-            <div class="producto">
-                <img src="./img/accesorio/pexels-badis-benkhelil-1135505371-27835298.jpg" alt="">
-                <p class="titulo-art">Conjunto Riviera Chic</p>
-                <span>$40.000</span>
-                <p class="descropcion-cuotas">6 cuotas sin interés de $6.666,67</p>
-
-            </div>*/
 productos.forEach((productos)=>{
     let content=document.createElement("div");
     content.className= "card";
@@ -84,12 +33,39 @@ productos.forEach((productos)=>{
 
  shopProductos.append(content);
  let abrirProducto=document.createElement("button")
- abrirProducto.innerText="Ver más."
+ abrirProducto.innerText="Ver más..."
  abrirProducto.className="ver_en_detalle"
 
  content.append(abrirProducto)
 })
 
+function generarEstrellas(cantidad) {
+    let estrellas = "";
+    for (let i = 1; i <= 5; i++) {
+        estrellas += i <= cantidad ? '<span class="star filled">★</span>' : '<span class="star">☆</span>';
+    }
+    return estrellas;
+}
+ // Obtener el contenedor de comentarios en el HTML
+const listaComentarios = document.querySelector(".customer-feedback-list");
+
+// Agregar comentarios dinámicamente al HTML
+comentariosClientes.forEach(cliente => {
+    const comentarioHTML = `
+        <div class="customer-feedback-item">
+            <img src="${cliente.foto}" alt="Foto de ${cliente.nombre}" class="customer-feedback-photo">
+            <div class="customer-feedback-content">
+                <h3 class="customer-feedback-name">${cliente.nombre}</h3>
+                <div class="customer-feedback-rating">
+                    ${generarEstrellas(cliente.calificacion)}
+                </div>
+                <p class="customer-feedback-comment">${cliente.comentario}</p>
+            </div>
+        </div>
+    `;
+
+    listaComentarios.innerHTML += comentarioHTML;
+});
 
 
 let sliderContainer= document.querySelector(".slider-container");
