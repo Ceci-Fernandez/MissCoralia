@@ -1,0 +1,82 @@
+:root{
+    --color-principal:rgb(245, 159, 196);
+    --color-secundario:rgb(252, 62, 94);
+    --color-blanco:white;
+    --color-gris:rgb(168, 167, 167);
+    --color-negro:black;
+}*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'ubuntu';
+
+    
+}
+.header-carrito {
+    background-color:var(--color-principal) ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-blanco);
+    padding:1em;
+    height: 10em;
+
+}
+.header-carrito a{
+    background-color:var(--color-principal) ;
+   display: flex;
+   justify-content: center;
+   color: var(--color-blanco);
+}
+.img_marca{
+    height: 90%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.carrito{
+    display: grid;
+    grid-template-rows: auto 150px;  /* La primera fila tiene tamaño automático, la segunda ocupa el resto */
+    grid-template-columns: 70% 30%; /* Dos columnas iguales */
+    height: auto; /* Ocupar toda la altura de la pantalla */
+    width: 100%; /* Ocupar todo el ancho */
+}
+.producto{
+   /* background-color:rgb(246, 246, 246);*/
+background-color: blueviolet;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr ;
+grid-template-rows:auto auto auto auto ; 
+}
+.resumen{
+    min-height: 300px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+.container_items{
+    display: flex;
+    gap:5em
+
+
+}
+.columnas{
+    background-color: brown;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+
+}
+.img_mini{
+    width: 100%;
+}
+.img_descripcion {
+    display: flex;
+    width: 30%;
+}
+.precio,.cantidad,.total{
+    width: auto;
+}

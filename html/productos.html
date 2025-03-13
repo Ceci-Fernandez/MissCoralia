@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styleProduct.css">
+<link rel="stylesheet" href="/css/styleProduct.css">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -53,17 +53,83 @@
 
    
 <main class="main-home">
-    <div id="detalle-producto">
-        <h1 class="titulo-prenda" id="nombre"></h1>
-        <img class="img-prod" id="imagen" src="/img/accesorio/pexels-badis-benkhelil-1135505371-27835298.jpg" alt="Imagen del producto">
-        <p id="precio"></p>
+    <section class="seccion_producto">
+    <div class="container_prod"  id="detalle-producto">
+        <img class="img_producto" id="imagen" 
+        src="/img/accesorio/pexels-badis-benkhelil-1135505371-27835298.jpg"
+         alt="Imagen del producto">
+      <div class="detalle_prod">
+        <h1 class="titulo-prenda" id="nombre">Cartera de mano</h1>
+        <div class="container_precio_tarjeta">
+            <p class="precio" id="precio">$30.000</p>
+            <p class="tarjeta" id="tarjeta"> 3 cuotas sin interes de 10.000 </p>
+        
+        </div>
+        <hr>
+        <div class="container_select">
+      <div class="container_talle">
+        <label for="talles">Seleccione un talle:</label>
+        <select name="talles" id="talles">
+            <opcion value="XL">XL</opcion>
+            <opcion value="L ">L</opcion>
+            <opcion value="S ">S</opcion>
+        </select>
       </div>
+      <div class="container_colores">
+        <label for="colores">Seleccione un color:</label>
+        <select name="colores" id="colores">
+            <opcion value="rojo">Rojo</opcion>
+            <opcion value=" ">Negro</opcion>
+            <opcion value=" ">Beige</opcion>
+        </select>
+      </div>
+    </div>
+    <button class=" btn_">AGREGAR AL CARRITO</button>
+       <div class=" btn_add_delete">
+        <button class="btn_">AGREGAR TODAS LAS VARIANTES AL CARRITO</button>
+        <button class="btn_">BORRAR TODOs LOS PRODUCTOS DEL CARRITO</button>
+       </div>
+       
+       
+      <div class="desplegable_envio_pagos">
+        <i class="bi bi-credit-card"><span>Medios de pago</span></i><i class="bi bi-caret-down"></i>
+
+      </div>
+      <div class="desplegable_envio_pagos">
+      <i class="bi bi-truck"><span>Medio de Envios </span>
+      </i><i class="bi bi-caret-down"></i>
+      </div>
+      <div class="desplegable_envio_pagos">
+        <i class="bi bi-shop"><span>Nuestro Local</span></i><i class="bi bi-caret-down"></i>
+      </div>
+     <div class="descripcion_prod">
+        <p> Longitud: Pequeña <br><br>
+            Tipo de ajuste: Solapa con cierre magnético <br><br>
+            Material: Cuero ecológico <br><br>
+            Composición: 100% PU (Poliuretano) <br><br>
+            Instrucciones de Cuidado: Limpiar con un paño húmedo. No exponer al sol por largos períodos. <br><br>
+            Avíos: Herrajes metálicos dorados <br><br>
+            Detalles: Compartimento interno con bolsillo pequeño</p>
+     </div>
+    </div>
     
+</section>
+<hr>
+<section class="seccion_relacionados">
+    <h2> Productos relacionados</h2>
+    <div class="slider_relacionados">
+        <img class="img_relacionada" src="/img/pantalones/pantalon_vestir.jpg" alt="">
+        <img class="img_relacionada" src="/img/pantalones/pantalon_vestir.jpg" alt="">
+        <img class="img_relacionada" src="/img/pantalones/pantalon_vestir.jpg" alt="">
+        <img class="img_relacionada" src="/img/pantalones/pantalon_vestir.jpg" alt="">
+    </div>
+
+</section>
 </main>
     <footer>
         <div class="container-colum-footer">
         <div class="titulo-columna-footer">
-            <h2>Menu</h2>
+            <h2>Menuu</h2>
             <ul>
                 <li><a href="">Inicio</a></li>
                 <li><a href="">Giftcard</a></li>

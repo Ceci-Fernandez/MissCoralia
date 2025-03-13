@@ -1,0 +1,124 @@
+:root{
+    --color-principal:rgb(245, 159, 196);
+    --color-secundario:rgb(252, 62, 94);
+    --color-blanco:white;
+    --color-gris:rgb(168, 167, 167);
+    --color-negro:black;
+}
+.seccion_producto{
+width: 100%;
+height: 50%;
+padding: 2em;
+}
+.container_prod{
+width: 100%;
+ display: flex;
+ justify-content: space-around;
+
+}
+.img_producto{
+    width: 50%;
+}
+
+.detalle_prod{
+width: 40%;
+display: flex;
+flex-direction: column;
+text-align: left;
+gap: 2em;
+}
+.precio{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.tarjeta{
+    font-style: italic;
+}
+.titulo-prenda{
+    font-size: 1.6em;
+    font-weight:200;
+
+}
+.container_precio_tarjeta{
+ width:100%;
+ display: flex;
+ justify-content: space-between;
+
+}
+.container_select{
+display: flex;
+gap: 1em;
+}
+.container_talle,.container_colores{
+width: 50%;
+height: 3em;
+text-align: center;
+border:.5px black solid;
+padding:1em;
+}
+.btn_{
+background-color:var(--color-principal) ;
+padding: 1em;
+text-align: center;
+border:none;
+font-size: 1em;
+font-weight: 200;
+color: var(--color-blanco);
+}
+
+
+.btn_:hover{
+    cursor: pointer;
+    background-color: var(--color-secundario);
+}
+.btn_add_delete {
+display: flex;
+justify-content: space-evenly;
+}
+.btn_add_delete button{
+    width: 49%;
+}
+.desplegable_envio_pagos{
+    display: flex;
+justify-content: space-between;
+}
+.desplegable_envio_pagos span{
+    margin-left: 1em;
+}
+.desplegable_envio_pagos i{
+    cursor: pointer;
+}
+.medio{
+  display: flex;
+  gap: 1.5em;
+}
+.medio img{
+    width: 5em;
+    height: 3em;
+}
+.descripcion_prod{
+  margin-top: 3em;
+  font-size: 1.2em;
+   font-weight: 200;
+}
+
+
+.seccion_relacionados{
+    text-align: center;
+
+}
+.seccion_relacionados h2{
+    font-size: 2em;
+    font-weight:200;
+    padding: 2em;
+}
+
+.slider_relacionados {
+  width: 100%;  
+}
+.img_relacionada{
+    width: 23%;
+    height: 35em;
+    padding: 1em;
+}
+

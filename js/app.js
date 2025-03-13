@@ -108,6 +108,17 @@ comentarios.forEach((comentarios) => {
 });
 
 // generar pagina de detalle dinamicamente
+document.addEventListener("click", function (event){
+if(event.target.classList.contains("comprar")){
+const btnComprar= event.target;
+
+const nombre= btnComprar.dataset.nombre;
+const img= btnComprar.dataset.img;
+const precio= btnComprar.dataset.precio;
+const tarjeta= btnComprar.dataset.tarjeta;
+const detallle= btnComprar.dataset.detallle;
+}
+})
 
 
 
@@ -135,4 +146,6 @@ hamburguesa.addEventListener('click',()=>{
         enlaces.style.display='none';
     }
 })
+
+
 
