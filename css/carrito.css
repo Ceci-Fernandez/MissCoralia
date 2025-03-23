@@ -17,6 +17,84 @@ body{
 
     
 }
+
+
+
+/*modal carrito */
+.modal-container{
+    width: 100%;
+    margin:0 10%;
+    max-width: 88vh;
+    color: var(--color-blanco);
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*para arriba*/
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    overflow-y: auto;
+    top: 10vh;
+    right: -18vh;
+    scrollbar-color: none;
+    max-height: 80vh;
+
+}
+.modal-container::-webkit-scrollbar{
+    display: none;
+}
+.modalHeader{
+position: fixed;
+display: flex;
+justify-content: space-between;
+background-color: #0a0909;
+color: var(--color-blanco);
+width: 40.5%;
+padding: 1em;
+}
+.modal-header-titulo{
+    justify-self: start;
+}
+.modal-header-button{
+cursor: pointer;
+}
+
+.modal-container .modal-content{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+width: 80%;
+margin: 2em;
+
+
+}
+.modal-container-img-contador{
+    display: flex;
+    flex-direction: column;
+}
+.modal-content i{
+    margin-left: 5em;
+}
+.total-content{
+    font-size: 25px;
+    padding: 2em;
+    text-align: center;
+    padding-top: 1em;
+    height: 2em;
+  
+   color: var(--color-negro);
+   background-color: var(--color-blanco);
+   width: 100%;
+}
+.img-carrito{
+    width: 10em;
+    height: 10em;
+}
+
+
 .header-carrito {
     background-color:var(--color-principal) ;
     display: flex;
@@ -39,43 +117,101 @@ body{
     box-sizing: border-box;
 }
 .carrito{
-    display: grid;
-    grid-template-rows: auto 150px;  /* La primera fila tiene tamaño automático, la segunda ocupa el resto */
-    grid-template-columns: 70% 30%; /* Dos columnas iguales */
-    height: auto; /* Ocupar toda la altura de la pantalla */
-    width: 100%; /* Ocupar todo el ancho */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
-.producto{
+.contenedor_productos{
+    width: 100%;
+    padding: 2em;
+}
+.producto_{
    /* background-color:rgb(246, 246, 246);*/
-background-color: blueviolet;
+width: 100%;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr ;
-grid-template-rows:auto auto auto auto ; 
+grid-template-columns: 7fr 6fr 6fr 4fr 1fr;
+align-items: center;
+background-color: rgb(245, 242, 245);
+
+padding: .5em;
+margin: 1em;
+
 }
 .resumen{
-    min-height: 300px;
-    width: 100%;
-    background-color: antiquewhite;
-}
-.container_items{
-    display: flex;
-    gap:5em
+ width: 30%;
+ margin: 2em;
+ border: gray 1px  solid;
+ padding: 1em;
 
-
+ display: flex;
+ flex-direction: column;
+ gap: 3em;
 }
-.columnas{
-    background-color: brown;
-    padding: 1em;
+.subTotal_,.total_{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: 200;
+   
+}
 
+.subTotal_{
+
+    font-weight: 100;
+}
+.resumen span, .total_{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.btn_pago{
+    padding: 1em; 
+    background-color: var(--color-principal);
+    border: none;
+    color: var(--color-blanco);
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 1.4em;
+
+}
+.btn_pago:hover{
+    background-color: var(--color-secundario);
+}
+
+.fila_titulos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 2fr ;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(86, 86, 86);
+    
+}
+
+.fila-cantidad{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    border: .5px slategray solid;
+    width: 8em;
+    height: 3em;
+}
+.fila-cantidad button{
+    width: 4em;
+    height: 2em;
+    border: none;
+    cursor: pointer;
 }
 .img_mini{
     width: 100%;
 }
 .img_descripcion {
     display: flex;
-    width: 30%;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    gap: 1em;
 }
 .precio,.cantidad,.total{
     width: auto;

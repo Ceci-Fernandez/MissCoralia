@@ -1,4 +1,6 @@
 const shopProductos=document.getElementById("productos");
+const verCarrito= document.getElementById("ver_carrito");
+const modalContainer= document.getElementById("modal-container");
 
 
 const seccionComentarios= document.getElementById("comentarios-alineados");
@@ -24,19 +26,85 @@ productos.forEach((productos)=>{
     `;   
 
  shopProductos.append(content);
- let abrirProducto=document.createElement("button")
- abrirProducto.innerText="Comprar"
- abrirProducto.className="ver_en_detalle"
- abrirProducto.dataset.id=productos.id;
+ let cargarALcarrito=document.createElement("button")
+ cargarALcarrito.innerText="Comprar"
+ cargarALcarrito.className="comprar" 
  
- content.append(abrirProducto)
+ content.append(cargarALcarrito);
 
-abrirProducto.addEventListener("click",(event)=>{
-    let productId= event.target.dataset.id;
-    mostrarDetalles(productId);
+cargarALcarrito.addEventListener("click",()=>{
+    carrito.push({
+       id:productos.id,
+       img: productos.img,
+       nombre: productos.nombre,
+       precio: productos.precio,
+    });
+   console.log(carrito);
+  
 })
 
 })
+
+
+// CARRITO
+verCarrito.addEventListener("click",()=>{
+const modalHeader= document.createElement("div")
+modalHeader.className="modalHeader"
+modalHeader.innerHTML=`
+<h1 class= "modal-header-titulo">Carrito</h1>
+`;
+modalContainer.append(modalHeader);
+const modalButton= document.createElement("h1")
+modalButton.innerText="X";
+modalButton.className="modal-header-button";
+
+modalHeader.append(modalButton);
+
+carrito.forEach((productos)=>{
+    let carritoContent= document.createElement("div");
+    carritoContent.className= "modal-content";
+    carritoContent.innerHTML= `
+    <div class = "modal-container-img-contador">
+    <img class= "img-carrito" src="${productos.img}">
+     <div class="img_descripcion">
+              
+    <h3> ${productos.nombre}</h3>
+     <div class="fila-cantidad"><button>+</button>2
+                <button>-</button>
+            </div> 
+
+            </div>
+   
+       
+            </div>
+                <i class="bi bi-trash3"></i>
+    <p> $${productos.precio}</h3>
+
+    
+    `;
+    modalContainer.append(carritoContent)
+
+})
+const total= carrito.reduce((acc, el)=> acc + el.precio,0);
+const totalComprado= document.createElement("div");
+totalComprado.className= "total-content";
+totalComprado.innerHTML=`TOTAL A PAGAR $ ${total}`;
+
+modalContainer.append(totalComprado);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
 /* pagina dinamica de detalle
 
 function mostrarDetalles(productId){
@@ -121,7 +189,7 @@ const detallle= btnComprar.dataset.detallle;
 })
 
 
-
+//SLIDER DE LA HOME
 let sliderContainer= document.querySelector(".slider-container");
  let imagenes= sliderContainer.querySelectorAll("img");
 let index= 0;
@@ -135,6 +203,7 @@ setInterval(() => {
 },3000);
 
 //Menu hamburguesa
+/*
 const hamburguesa= document.querySelector('#menu-hamburguesa')
 const enlaces= document.querySelector('#nav-links')
 hamburguesa.addEventListener('click',()=>{
@@ -145,7 +214,7 @@ hamburguesa.addEventListener('click',()=>{
     }else{
         enlaces.style.display='none';
     }
-})
+})*/
 
 
 

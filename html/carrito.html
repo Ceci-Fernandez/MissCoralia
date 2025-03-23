@@ -26,51 +26,46 @@
 </header>
 <main>
     <section class="carrito">
-        <div class="producto">
-        <div class="columna">
-       PRODUCTO
+        <div class="contenedor_productos">
+        <div class="fila_titulos">
+      <span class="item_">PRODUCTO</span>
+      <span class="item_" >SUBTOTAL</span>
+      <span class="item_">CANTIDAD</span>
+      <span class="item_">TOTAL</span>
         </div>
-        <div class="columna">
-           SUBTOTTAL
-             </div>
-             <div class="columna">
-            CANTIDAD
-                 </div>
-                 <div class="columna">
-                 TOTAL
-                     </div>
-    
-        <div class="fila">
+        <hr>
+        <div class="producto_">
             <div class="img_descripcion">
                 <img class="img_mini" src="/img/accesorio/pexels-mota-701877.jpg" alt="">
                 <p>Lentes Lennon celeste</p>
             </div>
+            <div class="fila-precio">$100.000</div>
+            <div class="fila-cantidad"><button>+</button>2
+                <button>-</button>
+            </div>
+            <div class="fila-total">$100.000</div>
+            <i class="bi bi-trash3"></i>
         </div>
 
-            <div class="fila-precio">$40000</div>
-            <div class="fila-cantidad"><button>2</button></div>
-            <div class="fila-total">$40000</div>
+           
   
-          
-            
-       
     </div>
     <div class="resumen">
         
-    
+       <span>RESUMEN</span>
         <div class="subTotal_">
-            <P>SUBTOTAL</P><span>$50000</span>
+            <P>SUBTOTAL</P><p>$100000</p>
         </div>
      <div class="total_">
-        <P>TOTAL</P><span>$100000</span>
+        <P>TOTAL</P><p>$100000</p>
      </div>
       <button class="btn_pago">INICIAR PAGO</button>
 
-    </div>
     </section>
 </main>
     <script src="./js/productos.js"></script>
 <script src="./js/app.js"></script>
+<script src="/js/carrito.js"></script>
 
 </body>
 
