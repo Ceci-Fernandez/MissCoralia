@@ -1,124 +1,114 @@
 :root{
-    --color-principal:rgb(245, 159, 196);
-    --color-secundario:rgb(252, 62, 94);
+    --colorPrincipal:   rgb(242, 182, 214);
+    --colorBotones:rgb(243, 118, 185);
     --color-blanco:white;
     --color-gris:rgb(168, 167, 167);
     --color-negro:black;
 }
-.seccion_producto{
-width: 100%;
-height: 50%;
+.acciones__detalleProducto{
+    padding: 1em;
+    background-color:rgb(225, 220, 220) ;
+    color: var(--color-gris);
+    display: flex;
+    gap: 1em;
+}
+.acciones__detalleProducto a,.acciones__detalleProducto i{
+    padding-left: 1em;
+    color: rgb(123, 120, 120);
+}
+
+.producto__container-producto{
+display: flex;
+gap: 2em;
 padding: 2em;
 }
-.container_prod{
-width: 100%;
- display: flex;
- justify-content: space-around;
 
-}
-.img_producto{
+.imagen_detalleProducto{
     width: 50%;
 }
-
-.detalle_prod{
-width: 40%;
-display: flex;
-flex-direction: column;
-text-align: left;
-gap: 2em;
-}
-.precio{
-    font-weight: bold;
-    font-size: 1.5em;
-}
-.tarjeta{
-    font-style: italic;
-}
-.titulo-prenda{
-    font-size: 1.6em;
-    font-weight:200;
-
-}
-.container_precio_tarjeta{
- width:100%;
- display: flex;
- justify-content: space-between;
-
-}
-.container_select{
-display: flex;
-gap: 1em;
-}
-.container_talle,.container_colores{
-width: 50%;
-height: 3em;
-text-align: center;
-border:.5px black solid;
-padding:1em;
-}
-.btn_{
-background-color:var(--color-principal) ;
-padding: 1em;
-text-align: center;
-border:none;
-font-size: 1em;
-font-weight: 200;
-color: var(--color-blanco);
-}
-
-
-.btn_:hover{
-    cursor: pointer;
-    background-color: var(--color-secundario);
-}
-.btn_add_delete {
-display: flex;
-justify-content: space-evenly;
-}
-.btn_add_delete button{
-    width: 49%;
-}
-.desplegable_envio_pagos{
-    display: flex;
-justify-content: space-between;
-}
-.desplegable_envio_pagos span{
-    margin-left: 1em;
-}
-.desplegable_envio_pagos i{
-    cursor: pointer;
-}
-.medio{
-  display: flex;
-  gap: 1.5em;
-}
-.medio img{
-    width: 5em;
-    height: 3em;
-}
-.descripcion_prod{
-  margin-top: 3em;
-  font-size: 1.2em;
-   font-weight: 200;
-}
-
-
-.seccion_relacionados{
-    text-align: center;
-
-}
-.seccion_relacionados h2{
-    font-size: 2em;
-    font-weight:200;
+.producto__container-producto img{
+    width: 100%;
+    height: 100vh;
     padding: 2em;
+  
+}
+.producto-detalle__producto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding:2em ;
+}
+.opciones-producto__producto{
+    display: flex;
+    gap: 2em;
+}
+.btnAgregarPrenda__detallePrenda{
+    background-color: var(--colorBotones);
+    color: var(--color-blanco);
+    padding: 2em;
+    cursor: pointer;
 }
 
-.slider_relacionados {
-  width: 100%;  
+.container-botones__detallePrendas{
+    display: flex;
+    gap: 1em;
 }
-.img_relacionada{
-    width: 23%;
-    height: 35em;
+.mas, .menos, .btnAgregarQuitarPrenda span,.btnAgregarPrenda__detallePrenda,
+ .btnAgregarQuitarPrenda{
+    width: 15em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
 }
+.mas, .menos, .btnAgregarQuitarPrenda span{
+    cursor: pointer;
+}
+.btnAgregarQuitarPrenda{
+    border: 1px solid rgb(211, 207, 207);
+}
 
+.carrusel-contenedor {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  gap: 1em;
+  padding: 1em;
+  scrollbar-width: none;
+}
+.carrousel-relacionados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.carrusel-contenedor::-webkit-scrollbar {
+  display: none;
+}
+
+.carrusel-contenedor .producto {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.carrusel-contenedor .producto:hover {
+  transform: scale(1.05);
+}
+
+.carrusel-contenedor .producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
