@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="/css/carrito.css">
 </head>
@@ -17,76 +18,116 @@
  
 <body>
     <header class="header-home">
-        <div class="marca">
-        <img src="./img/marca/1.png" alt="">
-        </div>
+        <div class="publicidad" id="publicidad"><p>Compras minimas $60.0000,00 | Envio gratis a todo el país</p></div>
+        
        <!-- <div class="buscador">
             <input type="search" name="buscador" id="serach" placeholder="Buscar prenda...">
         </div> -->
-        <nav class="navbar">
-            <ul class="nav-links" id="nav-links">
-                <li><a href="">Pantalones</a></li>
-                <li><a href="">Remeras</a></li>
-                <li><a href="">Faldas</a></li>
-                <li><a href="">Accesorio</a></li>
-                <li><a href="">Contacto</a></li>
-                <li><a href="">Giftcard</a></li>
-            </ul>
-            <!--Mmenu hamburguesa-->
 
-    
-    
-        </nav>
-        <div class="container-icons-header">
+        <nav class="navbar">
+            <div class="marca">
+              <p class="logo">Miss Coralia</p>
+              <p class="descripcion-logo">MODA FEMENINA</p>
+        </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="" id="nuevo">NUEVO</a></li>
+                <li><a href="" id="tienda">TIENDA</a>
+                <ul class="lista-tienda__nav-links" id="lista-tienda">
+                    <li>REMERAS</li>
+                    <li>PANTALONES</li>
+                    <li>VESTIDOS</li>
+                    <li>CALZAS</li>
+                    <li>BUZOS</li>
+                    <li>CAPMPERAS</li>
+                    <li>ACCESORIOS</li>
+                </ul>
+                </li>
+                <li><a href="" id="comoComprar">CÓMO COMPRAR</a></li>
+                <li><a href="" id="miCuenta">MI CUENTA</a></li>
+                <li><a href="" id="contacto">CONTACTO</a></li>
+                <li><a href="" id="gift">GIFTCARD</a></li>
+            </ul>
+
+            <div class="container-icons-header">
             <i class="iconor-nav bi-search"></i>
             <i class="iconor-nav bi-person"></i>
-            <i class="iconor-nav bi-bag-heart" id="ver_carrito"></i><span class="numerito">0</span>
-           
-
+            <div class="carrito-contenedor">
+            <i class="iconor-nav bi-bag-heart" id="ver_carrito"></i>
+            <span class="numerito" id="numerito">0</span>
+            </div>
         </div>
+            <!--Mmenu hamburguesa-->
+        </nav>
+        
         <div class="menu-hamburguesa" id="menu-hamburguesa">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-           
         </div>
-
-        
     </header>
 
    
 <main class="main-home">
     <div class="slider">
-
- <div class="slider-container">
-    <img src="./img/iconos/banner-1.webp" alt="">
-    <img src="./img/iconos/banner2.webp" alt="">
-    <img src="./img/iconos/banner3.webp" alt="">
+ <div class="slider-container" id="slider">
+  <!-- <img src="./img/iconos/banner-1.webp" alt="">--> 
  </div>
-
 </div>
-<section class="banner_informativo">
-            
-    <span>12 cuotas sin interes en todas tus compras</span>
+<section class="banner_informativo">        
 
+    <div class="item__banner_informativo">
+        <i class="bi bi-car-front-fill"></i>
+        <div class="texto-banner_informativo">
+         <h3>Envios a todo el país</h3>
+        <p>Correo Argentino transporte y expresos</p>
+        </div>
+    </div>
+    <div class="item__banner_informativo">
+        <i class="bi bi-shop"></i>
+        <div class="texto-banner_informativo">
+        <h3>Retiro en sucursal</h3>
+        <p>Podes retirar tu pedido en nuestra sucursal</p>
+        </div>  
+    </div>
+    <div class="item__banner_informativo">
+        <i class="bi bi-cash-coin"></i>
+        <div class="texto-banner_informativo">
+        <h3>Compra mínima</h3>
+        <p>Compra minima $60000</p>
+        </div>  
+    </div>
 </section>
 
-<section class="productos" id="productos">
-   <!-- <div id="detalle-producto" style="display: none;"></div>-->
+<section class="container-productos" >
+    <h3 class="titulo-seccion-producto"><i class="bi bi-dash-lg"></i> LO MAS NUEVO <i class="bi bi-dash-lg"></i></h3>
+<div class="productos" id="productos"></div>
+ <!-- <div id="detalle-producto" class="producto">
+    <img src="" alt="">
+    <p id="nombre-producto">nombre producto</p>
+    <span class="precio" id="precio-producto">precio</span>
+   </div>--> 
 </section>
 
 <section class="customer-feedback-section" id="seccion-comentarios">
 <h2 class="customer-feedback-title">Opiniones de Nuestras Clientas</h2>
 <div class="customer-feedback-list" id="comentarios-alineados">
-
-    
-
+    <!--
+<div class="comentario">
+   <img src="/img/usuarios/usuario1.jpg" alt="">
+   <div class="usuario">
+        <p class="nombre-usuario"> nombre usuario </p>
+        <span >⭐⭐⭐⭐</span>
+        </div>
+        <p class="caja-comentario">"Muy buena atención al cliente.
+             Me ayudaron enseguida con una duda y el producto llegó tal cual la foto."</p>
+    </div>
+     -->
 </div>
 </section> 
 </main>
     <footer>
         <div class="container-colum-footer">
-        <div class="titulo-columna-footer">
+        <div class="columna-footer">
             <h2>Menu</h2>
             <ul>
                 <li><a href="">Inicio</a></li>
@@ -95,7 +136,7 @@
                 <li><a href="">Contacto</a></li>
             </ul>
         </div>
-        <div class="titulo-columna-footer">
+        <div class="columna-footer">
             <h2>Ayuda</h2>
             <ul>
                 <li><a href="">Envios</a></li>
@@ -104,13 +145,16 @@
             </ul>
 
         </div>
-        <div class="titulo-columna-footer">
+        <div class="columna-footer">
             <h2>Seguinos</h2>
+            <div class="container-redes">
             <i class="iconor-nav bi-facebook"></i>
             <i class="iconor-nav bi-instagram"></i>
             <i class="iconor-nav bi-whatsapp"></i>
-
+            </div>
+         
         </div>
+
     </div>
         <div class="copyright">
             <p> Copyright MisCoralia| Ropa de mujer-2024.Todos los derechos reservados</p>
@@ -119,7 +163,7 @@
 
     <div id="modal-container" class="modal-container"></div>
     <script src="./js/productos.js"></script>
-<script src="./js/app.js"></script>
+<script src="./js/index.js"></script>
 <script src="/js/carrito.js"></script>
 
 </body>
